@@ -80,13 +80,13 @@ export default function LoginPage() {
             <button type="submit" className="btn btn-primary btn-full" disabled={loading}>
               <LogIn size={16} />
               {loading ? 'Signing in...' : 'Sign In'}
-            </button>
+  
           </form>
 
-          <div className="auth-divider"><span>or</span></div>
-          <button onClick={demoLogin} className="btn btn-secondary btn-full" disabled={loading}>
-            Try Demo Account
-          </button>
+
+
+
+
 
           <p className="auth-link">
             New to SkillSync? <Link to="/register">Create account</Link>

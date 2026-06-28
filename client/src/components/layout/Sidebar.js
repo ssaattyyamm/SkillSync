@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import {
-  LayoutDashboard, Users, UserCheck, GitBranch,
-  LogOut, Zap, Bell, Settings
+  LayoutDashboard, Users, UserCheck,
+  LogOut, Zap, Bell, User
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -12,7 +12,6 @@ const navItems = [
   { to: '/discover', icon: Users, label: 'Discover' },
   { to: '/connections', icon: UserCheck, label: 'Connections' },
   { to: '/requests', icon: Bell, label: 'Requests' },
-  { to: '/profile/edit', icon: Settings, label: 'Profile' },
 ];
 
 export default function Sidebar() {
@@ -28,13 +27,11 @@ export default function Sidebar() {
 
   return (
     <aside className="sidebar">
-      {}
       <div className="sidebar-logo">
         <div className="logo-icon"><Zap size={20} /></div>
         <span className="logo-text">SkillSync</span>
       </div>
 
-      {}
       <div className="sidebar-user" onClick={() => navigate(`/profile/${user?._id}`)}>
         <div className="avatar avatar-sm" style={{ background: 'var(--accent-glow)', border: '2px solid var(--accent)' }}>
           {user?.profilePicture
@@ -44,13 +41,12 @@ export default function Sidebar() {
         </div>
         <div className="sidebar-user-info">
           <div className="sidebar-user-name">{user?.name}</div>
-          <div className="sidebar-user-meta">{user?.branch} Â· Year {user?.year}</div>
+          <div className="sidebar-user-meta">{user?.branch} · Year {user?.year}</div>
         </div>
       </div>
 
       <hr className="divider" style={{ margin: '8px 16px' }} />
 
-      {}
       <nav className="sidebar-nav">
         {navItems.map(({ to, icon: Icon, label }) => (
           <NavLink key={to} to={to} className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
@@ -60,11 +56,10 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      {}
       <div className="sidebar-bottom">
-        <button className="sidebar-link" onClick={() => navigate('/profile/edit')}>
-          <Settings size={18} />
-          <span>Edit Profile</span>
+        <button className="sidebar-link" onClick={() => navigate(`/profile/${user?._id}`)}>
+          <User size={18} />
+          <span>Profile</span>
         </button>
         <button className="sidebar-link sidebar-logout" onClick={handleLogout}>
           <LogOut size={18} />
@@ -72,7 +67,6 @@ export default function Sidebar() {
         </button>
       </div>
 
-      {}
       <div className="sidebar-scores">
         <div className="score-chip">
           <span className="score-label">CP</span>
@@ -86,4 +80,3 @@ export default function Sidebar() {
     </aside>
   );
 }
-

@@ -1,0 +1,69 @@
+.auth-page {
+  min-height: 100vh; display: flex; align-items: center;
+  justify-content: center; padding: 20px; position: relative;
+  background: var(--bg-primary);
+}
+.auth-bg {
+  position: fixed; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(79,142,247,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 70%, rgba(139,92,246,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.auth-container {
+  position: relative; z-index: 1;
+  display: flex; gap: 60px; align-items: center;
+  width: 100%; max-width: 900px;
+}
+.auth-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 40px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.auth-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+.auth-title { font-size: 26px; font-weight: 800; color: var(--text-primary); }
+.auth-subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 28px; }
+
+.input-icon-wrap { position: relative; }
+.input-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); pointer-events: none;
+}
+.input-with-icon { padding-left: 42px; }
+
+.auth-divider {
+  text-align: center; margin: 20px 0; position: relative;
+  color: var(--text-muted); font-size: 13px;
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; position: absolute; top: 50%; width: calc(50% - 24px);
+  height: 1px; background: var(--border);
+}
+.auth-divider::before { left: 0; }
+.auth-divider::after { right: 0; }
+
+.auth-link {
+  text-align: center; margin-top: 20px;
+  font-size: 14px; color: var(--text-muted);
+}
+.auth-link a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.auth-link a:hover { text-decoration: underline; }
+
+.auth-features {
+  flex: 1; padding: 20px;
+}
+.auth-features h2 {
+  font-size: 28px; font-weight: 800; color: var(--text-primary);
+  line-height: 1.3; margin-bottom: 28px;
+}
+.auth-features ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.auth-features li { font-size: 16px; color: var(--text-secondary); }
+
+/* Register extras */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+@media (max-width: 768px) {
+  .auth-container { flex-direction: column; gap: 32px; }
+  .auth-features { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+}

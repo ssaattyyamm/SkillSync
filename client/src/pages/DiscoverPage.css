@@ -1,0 +1,14 @@
+.search-bar { display: flex; gap: 12px; margin-bottom: 16px; }
+.search-bar input { flex: 1; }
+
+.filters-panel { margin-bottom: 16px; }
+.filters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 12px; }
+
+.results-header { margin-bottom: 16px; }
+
+.students-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.pagination { display: flex; gap: 8px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+
+@media (max-width: 1024px) { .students-grid { grid-template-columns: repeat(2, 1fr); } .filters-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .students-grid { grid-template-columns: 1fr; } .filters-grid { grid-template-columns: 1fr; } .search-bar { flex-wrap: wrap; } }

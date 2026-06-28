@@ -1,0 +1,25 @@
+.student-card {
+  cursor: pointer; transition: all 0.2s;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.student-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+.student-card-header { display: flex; align-items: center; gap: 12px; }
+.student-avatar { background: var(--accent-glow); border: 2px solid var(--border); }
+.student-name { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+.student-meta { font-size: 12px; color: var(--text-muted); }
+
+.student-card-scores { display: flex; flex-direction: column; gap: 6px; }
+.score-pill {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
+.score-pill span:first-of-type { font-weight: 600; flex: 1; }
+
+.student-skills { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.student-card-actions {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  border-top: 1px solid var(--border-light); padding-top: 12px; margin-top: 2px;
+}

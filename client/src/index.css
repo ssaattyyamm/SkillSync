@@ -175,3 +175,5 @@ body {
   .main-content { margin-left: 0; padding: 16px; max-width: 100%; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 768px) { .main-content { margin-left: 0 !important; padding-bottom: 70px !important; } }

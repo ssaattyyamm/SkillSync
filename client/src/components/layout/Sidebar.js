@@ -12,6 +12,7 @@ const navItems = [
   { to: '/discover', icon: Users, label: 'Discover' },
   { to: '/connections', icon: UserCheck, label: 'Connections' },
   { to: '/requests', icon: Bell, label: 'Requests' },
+  { to: '/profile/edit', icon: Settings, label: 'Profile' },
 ];
 
 export default function Sidebar() {
@@ -85,3 +86,4 @@ export default function Sidebar() {
     </aside>
   );
 }
+

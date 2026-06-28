@@ -319,3 +319,7 @@ cd client && npm start       # → http://localhost:3000
 ---
 
 *Built with ❤️ for college coders | Interview-ready MERN project*
+
+
+## Live Demo
+https://skill-sync-sable-two.vercel.app

@@ -27,19 +27,6 @@ export default function LoginPage() {
     }
   };
 
-  const demoLogin = async () => {
-    setLoading(true);
-    try {
-      await login('arjun@nitdelhi.ac.in', 'password123');
-      toast.success('Logged in as demo user!');
-      navigate('/dashboard');
-    } catch {
-      toast.error('Demo login failed. Run the seed script first.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="auth-page">
       <div className="auth-bg" />
@@ -51,7 +38,6 @@ export default function LoginPage() {
           </div>
           <h1 className="auth-title">Welcome back</h1>
           <p className="auth-subtitle">Sign in to your college network</p>
-
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="form-label">Email</label>
@@ -73,33 +59,23 @@ export default function LoginPage() {
                 <Lock size={16} className="input-icon" />
                 <input type="password" name="password" value={form.password}
                   onChange={handleChange} className="form-input input-with-icon"
-                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required />
+                  placeholder="••••••••" required />
               </div>
             </div>
-
             <button type="submit" className="btn btn-primary btn-full" disabled={loading}>
               <LogIn size={16} />
               {loading ? 'Signing in...' : 'Sign In'}
-  
+            </button>
           </form>
-
-
-
-
-
-
           <p className="auth-link">
             New to SkillSync? <Link to="/register">Create account</Link>
           </p>
         </div>
-
         <div className="auth-features">
           <h2>Connect with the best coders in your college</h2>
           <ul>
-            <li>ğŸ† Discover top ranked coders and developers</li>
-            <li>â­ Star ratings based on problems solved + contest rating</li>
-            <li>ğŸ“Š Track your CP and Dev scores</li>
-            <li>ğŸ” Find project partners and mentors</li>
+            <li>Discover top ranked coders and developers</li>
+            <li>Find project partners and mentors</li>
           </ul>
         </div>
       </div>

@@ -1,4 +1,4 @@
-# SkillSync 🚀
+# SkillSync 
 
 > A college-exclusive networking and peer-learning platform where students discover and connect based on coding & development skills.
 
@@ -6,22 +6,22 @@
 
 ---
 
-## 🌟 Features
+##  Features
 
 | Feature | Description |
 |---|---|
-| 🔐 Auth | Register, Login, JWT-protected routes |
-| 👤 Profiles | Skills, branch, year, bio, social links |
-| 🏆 CP Score | Aggregated from LeetCode + Codeforces + CodeChef |
-| ⚡ Dev Score | Computed from GitHub repos, contributions, stars |
-| 🎖️ Badges | Beginner → Intermediate → Advanced → Expert |
-| 🔍 Discover | Search + filter by skills, branch, year, college |
-| 🤝 Connections | Send / Accept / Reject / Remove (LinkedIn-style) |
-| 📊 Dashboard | Leaderboards, recommendations, pending requests |
+|  Auth | Register, Login, JWT-protected routes |
+|  Profiles | Skills, branch, year, bio, social links |
+|  CP Score | Aggregated from LeetCode + Codeforces + CodeChef |
+|  Dev Score | Computed from GitHub repos, contributions, stars |
+|  Badges | Beginner → Intermediate → Advanced → Expert |
+|  Discover | Search + filter by skills, branch, year, college |
+|  Connections | Send / Accept / Reject / Remove (LinkedIn-style) |
+|  Dashboard | Leaderboards, recommendations, pending requests |
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 skillsync/
@@ -89,7 +89,7 @@ skillsync/
 
 ---
 
-## 🗃️ Database Schema
+##  Database Schema
 
 ### User
 ```js
@@ -168,7 +168,7 @@ skillsync/
 
 ---
 
-## ⚡ Scoring Algorithm
+##  Scoring Algorithm
 
 ### CP Score (0 – 1000)
 ```
@@ -201,7 +201,7 @@ Stars:                 stars×5 (max 150)
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Node.js v18+
@@ -318,7 +318,7 @@ cd client && npm start       # → http://localhost:3000
 
 ---
 
-*Built with ❤️ for college coders | Interview-ready MERN project*
+*Built with  for college coders | Interview-ready MERN project*
 
 
 ## Live Demo
